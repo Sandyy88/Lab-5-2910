@@ -19,4 +19,9 @@
 5. I jumped around when doing the client request methods, so the next issue I got to was figuring out how I was going to call the methods that parameterized based on what the user had not excluded previously.
     - I resolved this by doing a "Contains" on the list I had made that had the options the user could choose to request (line 175 in the program). To further explain, there are three parameterizable options available and some (like the password) should not be parameterized if the user has chosen to exclude login. Moreover, if the user had chosen to exclude all three parameterizable available, then it should not be called. It would go on to "await RetrievingMoreThanOne()". 
     - Example: If the user chooses to exclude gender, the SpecifyGender() could not be requested.
+     
+6. For my "await SpecifyPassword()" method I encountered the issue of the user not choosing the first set of options but then the next. This would make placing "&&" and "?" in the right places. Furthermore, a "," would need to be placed between the sets of options.
+    - I resolved this by using two static strings for this method and not simply one like how used for the previous request methods. The first string that holds the first set is checked to see if it holds a value. 
+    - Additionally, I encountered a similar issue with "await SpecifyNationality()". I resolved it a similar way.
 
+7. I ran into minor logic issues, but nothing that needs to be noted of as a first experience lol.
